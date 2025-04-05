@@ -19,15 +19,19 @@ void handle_usr1(int sig, siginfo_t *info, void *ucontext) {
     int mode = info->si_value.sival_int;
 
     if (mode == 1) {
+        current_mode = 1;
         received_count++;
         printf("Liczba żądań zmiany trybu: %d\n", received_count);
     } else if (mode == 2) {
         current_mode = 2;
     } else if (mode == 3) {
+        current_mode = 3;
         signal(SIGINT, SIG_IGN);
     } else if (mode == 4) {
+        current_mode = 4;
         signal(SIGINT, ctrlc_handler);
     } else if (mode == 5) {
+        current_mode = 5;
         exit(0);
     }
 
