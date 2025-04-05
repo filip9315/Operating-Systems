@@ -1,0 +1,5 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/filip/Desktop/studia/SO/lab01/countdown'
+relocations:     []
+...

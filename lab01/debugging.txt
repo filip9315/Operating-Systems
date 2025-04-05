@@ -1,0 +1,11 @@
+lldb
+
+file ./countdown
+
+breakpoint set --file countdown.c --line 5
+
+frame variable i
+
+continue
+
+breakpoint delete 1
